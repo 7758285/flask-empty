@@ -3,7 +3,7 @@ Flask Empty(CN)
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/italomaia/flask-empty?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Flask-Empty 是一个简单的flask骨架代码,用了cookiecutter创建项目代码。修正了几个小问题,根据自己的习惯集成了mako模版引擎。
+Flask-Empty 是一个简单的flask骨架代码,用了cookiecutter创建项目代码。修正了几个小问题,根据自己的习惯集成了mako模版引擎。源仓库地址是https://github.com/italomaia/flask-empty
 
 使用方法
 =====
@@ -34,8 +34,6 @@ pip install -r requirements/prod.txt  # prod environment if server
 
 重要的几个文件
 ==============================
-
-### project/config.py
 
 **extensions.py** all extension instances that need initialization should be available
 here in order for _Empty_ to see and initialize them for you.
