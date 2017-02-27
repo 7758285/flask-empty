@@ -1,26 +1,25 @@
-Flask Empty
+Flask Empty(CN)
 ===========
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/italomaia/flask-empty?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Flask-Empty is a simple **flask boilerplate** for fast prototyping. Just
-use cookiecutter and create a new project in no time.
+Flask-Empty 是一个简单的flask骨架代码,用了cookiecutter创建项目代码。修正了几个小问题,根据自己的习惯集成了mako模版引擎。
 
+使用方法
+=====
 ```shell
 # if cookiecutter is not installed
 sudo pip install cookiecutter
 
 # using cookiecutter // linux/Mac
-cookiecutter https://github.com/italomaia/flask-empty
+cookiecutter https://github.com/7758285/flask-empty
 
 # answer the prompt and you're done!
 ```
 
-Setup
+安装
 =====
-
-You're advised to use virtualenvwrapper from here on. Install it like this:
-
+鼓励用virtualenvwrapper去安装
 ```
 pip install virtualenvwrapper
 ```
