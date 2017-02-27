@@ -94,8 +94,8 @@ class Apps(Command):
         os.mkdir(os.path.join(app_path, 'templates', path_name))
 
         # empty __init__.py
-        with open(os.path.join(app_path, '__init__.py'), 'w'):
-            pass
+        with open(os.path.join(app_path, '__init__.py'), 'w') as file:
+            file.write('from .views import app\n\n')
 
         with open(os.path.join(app_path, 'models.py'), 'w') as file:
             if 'flask-sqlalchemy' in self.requirements:
@@ -110,11 +110,11 @@ class Apps(Command):
 
         with open(os.path.join(app_path, 'views.py'), 'w') as file:
             file.write(""
-                "from flask import Blueprint\n"
-                "from flask import render_template, flash, redirect, url_for\n\n"
-                "app = Blueprint('%(name)s', __name__, template_folder='templates')\n\n"
-                % {'name': name}
-            )
+                       "from flask import Blueprint\n"
+                       "from flask import render_template, flash, redirect, url_for\n\n"
+                       "app = Blueprint('%(name)s', __name__, template_folder='templates')\n\n"
+                       % {'name': name}
+                       )
 
 
 class Test(Command):
@@ -128,9 +128,9 @@ class Test(Command):
     def get_options(self):
         return [
             Option('--verbosity', '-v', dest='verbosity',
-                    type=int, default=self.verbosity),
+                   type=int, default=self.verbosity),
             Option('--failfast', dest='failfast',
-                    default=self.failfast, action='store_false')
+                   default=self.failfast, action='store_false')
         ]
 
     def run(self, **kwargs):
