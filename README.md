@@ -35,32 +35,34 @@ pip install -r requirements/prod.txt  # prod environment if server
 重要的几个文件
 ==============================
 
-**extensions.py** 所有需要初始化的扩展实例都放在这里
+**extensions.py** 
 
-**config.py** 预先设置的配置类,在启动项目前首先必须设置它
+所有需要初始化的扩展实例都放在这里
 
-**main.py** the _Empty_ class inherits from the _Flask_ class. Override it if you need to setup
-extensions, an index view, context processors, etc. It already has sensitive defaults for most
- features. (see **empty.py** to better understand _Empty_)
+**config.py** 
+
+预先设置的配置类,在启动项目前首先必须设置它
+
+**main.py** 
  
  _Empty_ 类继承了_Flask_类,重载了一些需要去安装的扩展,一个index _View_,和context processors等等。对于大多数的
  特性都有默认的设置。(查看**empty.py**能够更好的了解_Empty_)
  
-**database.py** setup your database library there. There is some commented code for sqlalchemy support out of the box.
+**database.py** 
 
-**PROJECT_NAME.ini** is the configuration file used with
-[uwsgi](https://github.com/unbit/uwsgi). Use it like this:
+安装第三方数据库支持驱动,默认用sqlachemy *orm*。
+
+**PROJECT_NAME.ini** 
+
+这个文件是生产环境下被用来在[uwsgi](https://github.com/unbit/uwsgi)部署用的. 可以这样使用它:
 
 ```
 uwsgi --ini your_project.ini
 ```
 
-**manage.py** adds few very useful commandline commands (...) to help your development productivity. Check
-available commands by running **python manage.py**.
+**manage.py** 
 
-## Heroku
-
-Empty comes with a pre-configured _procfile_ and _heroku()_ wrapper for _app_factory_. No setup required.
+增加了一些非常有用的命令来提高开发生产力。需要查看提供了哪些命令运行**python manage.py**
 
 ## Observations
 
