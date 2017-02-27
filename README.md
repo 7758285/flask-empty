@@ -35,16 +35,17 @@ pip install -r requirements/prod.txt  # prod environment if server
 重要的几个文件
 ==============================
 
-**extensions.py** all extension instances that need initialization should be available
-here in order for _Empty_ to see and initialize them for you.
+**extensions.py** 所有需要初始化的扩展实例都放在这里
 
-**config.py** is a pre-set configuration classes for you to meddle with. They're are all self explanatory
-and commented.
+**config.py** 预先设置的配置类,在启动项目前首先必须设置它
 
 **main.py** the _Empty_ class inherits from the _Flask_ class. Override it if you need to setup
 extensions, an index view, context processors, etc. It already has sensitive defaults for most
  features. (see **empty.py** to better understand _Empty_)
-
+ 
+ _Empty_ 类继承了_Flask_类,重载了一些需要去安装的扩展,一个index _View_,和context processors等等。对于大多数的
+ 特性都有默认的设置。(查看**empty.py**能够更好的了解_Empty_)
+ 
 **database.py** setup your database library there. There is some commented code for sqlalchemy support out of the box.
 
 **PROJECT_NAME.ini** is the configuration file used with
