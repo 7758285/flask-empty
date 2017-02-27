@@ -74,7 +74,7 @@ uwsgi --ini your_project.ini
 python manage.py -r -c Config
 ```
 
-如果 [environment config named APP_CONFIG is set](http://flask.pocoo.org/docs/config/#configuring-from-files),
+如果 [environment config named APP_CONFIG is set](http://flask.pocoo.org/docs/config/#configuring-from-files)
 被使用, 能够重载一些其他的参数
 
 Other topics
