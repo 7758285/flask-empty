@@ -64,19 +64,18 @@ uwsgi --ini your_project.ini
 
 增加了一些非常有用的命令来提高开发生产力。需要查看提供了哪些命令运行**python manage.py**
 
-## Observations
+## 问题
 
-Note that the Flask-Script option "-d (disable debug)" does not work as expected with Flask-Empty. If you want
-to start a non-debug internal server instance, use the **config.Config** configuration or write your own. Example:
+注意Flask-Script参数-d不能用在Flask-Empty下。如果你不想开启调试模式去启动内部的服务器实例,用**config.Config**去重新自己的配置,比如:
 
 ```python
-# loads config.Config configuration, which has DEBUG=False
-# -r is the Flask-Script option for internal server no-reload
+# 加载config.Config, 里面配置了DEBUG=False
+# -r 是Flask-Script的no-reload模式下启动程序的参数
 python manage.py -r -c Config
 ```
 
-If [environment config named APP_CONFIG is set](http://flask.pocoo.org/docs/config/#configuring-from-files),
-it will be used, overwriting any other set configuration.
+如果 [environment config named APP_CONFIG is set](http://flask.pocoo.org/docs/config/#configuring-from-files),
+被使用, 能够重载一些其他的参数
 
 Other topics
 ============
