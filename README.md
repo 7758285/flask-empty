@@ -23,18 +23,16 @@ cookiecutter https://github.com/7758285/flask-empty
 ```
 pip install virtualenvwrapper
 ```
-
-Create a virtual environment for you project and install the adequate requirements.
-
+为你的项目创建虚拟环境,和安装相关依赖
 ```
 mkvirtualenv my_project
 pip install -r requirements/dev.txt  # dev environment if local
 pip install -r requirements/prod.txt  # prod environment if server
 ```
 
-You're advised to change the requirements files according to your needs.
+你可以根据你的需要去改变依赖选项
 
-Important files to be aware of
+重要的几个文件
 ==============================
 
 ### project/config.py
