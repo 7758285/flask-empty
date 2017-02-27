@@ -48,6 +48,10 @@ class Apps(Command):
     APPS_FOLDER = 'apps'
     NEW_APP = False
 
+    def __init__(self, func=None):
+        super(Apps, self).__init__(func)
+        self._requirements = None
+
     @staticmethod
     def normalize_path(name):
         return os.path.normpath(name).replace(" ", "_").lower()
@@ -102,7 +106,7 @@ class Apps(Command):
 
         if 'flask-wtf' in self.requirements:
             with open(os.path.join(app_path, 'forms.py'), 'w') as file:
-                file.write('from from flask_wtf import Form\n\n')
+                file.write('from flask_wtf import Form\n\n')
 
         with open(os.path.join(app_path, 'views.py'), 'w') as file:
             file.write(""
